@@ -33,4 +33,4 @@ This is an independent portfolio project using synthetic data. It is not profess
 ## Project links
 
 - **Live application:** [Add Streamlit link here](https://ai-customer-retention-dashboard-neryqhtoam5kzpaz4s7ncy.streamlit.app/)
-- **Source code:** Add GitHub link here
+- **Source code:** [Add GitHub link here](https://github.com/adinaik177/ai-customer-retention-dashboard)
