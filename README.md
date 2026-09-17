@@ -49,7 +49,7 @@ streamlit run app.py
 ## Deploy free with Streamlit Community Cloud
 
 1. Upload `app.py`, `requirements.txt` and this `README.md` to a public GitHub repository.
-2. Go to `https://share.streamlit.io` and sign in with GitHub.
+2. Go to `[https://share.streamlit.io](https://ai-customer-retention-dashboard-neryqhtoam5kzpaz4s7ncy.streamlit.app/)` and sign in with GitHub.
 3. Select **Create app**.
 4. Choose the repository and the `main` branch.
 5. Set the main file path to `app.py`.
