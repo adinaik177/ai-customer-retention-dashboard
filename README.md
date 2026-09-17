@@ -1,22 +1,35 @@
 # AI Customer Churn & Retention Dashboard
 
-An independent personal project exploring how a machine-learning model can support customer-retention decisions in a digital business. The application estimates churn risk, visualises customer patterns and suggests human-reviewed retention actions.
+An interactive decision-support application that demonstrates how machine learning can help a digital business identify customers at risk of leaving, prioritise retention activity and estimate the potential business value of an intervention.
+
+**[Open the live application](https://ai-customer-retention-dashboard-neryqhtoam5kzpaz4s7ncy.streamlit.app/)**
 
 ## Business problem
 
-Customer churn reduces recurring revenue and increases customer-acquisition pressure. This project demonstrates how a business could use customer behaviour data to identify higher-risk accounts, prioritise interventions and estimate the possible value of a retention campaign.
+Customer churn can reduce recurring revenue and increase acquisition pressure. This project translates customer-behaviour data into a practical workflow: understand the customer base, estimate individual churn risk, review suggested actions and explore a retention scenario.
 
-## What the application demonstrates
+## Key features
 
-- Synthetic customer-data generation
-- Data preparation and feature processing
-- Logistic-regression classification with scikit-learn
-- Churn-probability predictions
-- Business KPIs and data visualisation
-- Transparent retention recommendations
+- Business overview with customer and churn KPIs
+- Interactive charts for customer patterns
+- Customer-level churn probability
+- Low-, medium- and high-risk classification
+- Transparent, human-reviewed retention recommendations
 - Scenario-based business-value estimation
-- Model-performance reporting
-- Responsible-AI controls and limitations
+- Model evaluation using accuracy and ROC-AUC
+- Responsible-AI limitations and controls
+
+## How it works
+
+The application generates a reproducible synthetic dataset containing monthly spend, tenure, satisfaction, support-ticket volume, digital engagement and contract type. It then:
+
+1. Splits the data into training and test sets.
+2. Scales numerical variables and one-hot encodes contract type.
+3. Trains a logistic-regression classifier with scikit-learn.
+4. Converts predicted probabilities into clear risk categories.
+5. Uses explicit business rules to suggest reviewable retention actions.
+
+The model prediction and the operational recommendation are intentionally separated so that a human remains responsible for the final decision.
 
 ## Technology
 
@@ -24,47 +37,21 @@ Customer churn reduces recurring revenue and increases customer-acquisition pres
 - Streamlit
 - pandas and NumPy
 - scikit-learn
-- GitHub
-
-## Live application
-
-Add Streamlit link here after deployment.
+- Git and GitHub
 
 ## Run locally
 
-1. Download or clone this repository.
-2. Open a terminal in the project folder.
-3. Install the packages:
-
 ```bash
+git clone https://github.com/adinaik177/ai-customer-retention-dashboard.git
+cd ai-customer-retention-dashboard
 pip install -r requirements.txt
-```
-
-4. Start the application:
-
-```bash
 streamlit run app.py
 ```
 
-## Deploy free with Streamlit Community Cloud
-
-1. Upload `app.py`, `requirements.txt` and this `README.md` to a public GitHub repository.
-2. Go to `[https://share.streamlit.io](https://ai-customer-retention-dashboard-neryqhtoam5kzpaz4s7ncy.streamlit.app/)` and sign in with GitHub.
-3. Select **Create app**.
-4. Choose the repository and the `main` branch.
-5. Set the main file path to `app.py`.
-6. Select **Deploy**. No API key or paid service is required.
-
-## Method
-
-The application creates a reproducible fictional dataset containing monthly spend, tenure, support-ticket volume, satisfaction, digital engagement and contract type. It splits the data into training and test sets, scales numerical variables, one-hot encodes contract type and trains a logistic-regression classifier.
-
-The predicted probability supports a low-, medium- or high-risk category. Retention actions are produced through explicit business rules so that the distinction between model prediction and operational recommendation remains clear.
-
 ## Responsible use
 
-All customer records are synthetic. The application is an educational portfolio demonstration and must not be used for real customer decisions. A production implementation would require lawful data processing, privacy safeguards, representative data, fairness assessment, stakeholder approval, human oversight and continuous monitoring.
+All customer records are synthetic. This is an educational portfolio project, not a production system or a tool for real customer decisions. A real implementation would require lawful data processing, privacy safeguards, representative data, fairness testing, stakeholder approval, human oversight and continuous monitoring.
 
 ## Skills demonstrated
 
-Machine Learning, Artificial Intelligence, Digital Business, Predictive Analytics, Data Visualisation, Business Analysis, Python, Streamlit, Responsible AI, Decision Support and GitHub.
+Machine Learning · Python · Predictive Analytics · Data Visualisation · Digital Business · Business Analysis · Streamlit · Responsible AI · Decision Support
